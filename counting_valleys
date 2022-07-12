@@ -1,0 +1,10 @@
+    # HackerRank challenge rank: https://www.hackerrank.com/challenges/counting-valleys/problem
+    # Write your code here
+    tot = 0
+    val = 0
+    for x in path:
+        ele = 1 if x =='U' else -1
+        if tot < 0 and tot+ele==0:
+            val += ele
+        tot += ele
+    return val
