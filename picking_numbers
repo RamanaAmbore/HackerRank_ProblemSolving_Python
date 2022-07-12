@@ -1,0 +1,17 @@
+# hackerRank challenge link: https://www.hackerrank.com/challenges/picking-numbers/problem
+# Write your code here
+    
+a.sort()
+sarr_len = 1
+max_len = 1
+strt = a[0]
+
+for x in a[1:]:
+    if (x-strt) <= 1:
+       sarr_len+= 1
+    else:
+       strt = x
+       if sarr_len > max_len: max_len = sarr_len 
+       sarr_len = 1
+            
+return max_len   
